@@ -18,9 +18,20 @@ $numerals = array(
 	'xii'  => 12,
 	'XIII' => 13,
 	'XIV'  => 14,
-	'XV'   => 15
+	'XV'   => 15,
+	'MCMXC' => 1990,
+	'MMMMMCMXCIX' => 5999,
+	'CM' => 900,
+	'XL' => 40,
+	'XC' => 90
 );
 
 foreach( $numerals as $test => $answer ) {
-	echo $test . ' is ' . roman_numerals( $test ) . ". " . check('roman_numerals', $test, $answer) . "\n";
+	echo $test . ' is ' . roman_numerals( $test ) . ". " . check('roman_numerals', $test, $answer) . "\n<br>";
 }
+
+foreach( $numerals as $test ) {
+	echo $test . ' is ' . int_to_roman( $test ) . ". " .  "\n<br>";
+}
+
+?>
